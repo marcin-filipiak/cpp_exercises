@@ -1,11 +1,21 @@
+#include <iostream>
 
-#include <stdio.h>
+using namespace std;
 
-int main()
-{
-    
-    for(int x=0; x<5; x++){
-        printf("Hello World \n");
+int main() {
+    int n;
+    unsigned long long silnia = 1;
+
+    cout << "Podaj liczbe: ";
+    cin >> n;
+
+    if (n < 0) {
+        cout << "Nie mozna obliczyc silni dla liczb ujemnych!" << endl;
+    } else {
+        for (int i = 2; i <= n; i++) {
+            silnia *= i;
+        }
+        cout << "Silnia z " << n << " wynosi " << silnia << endl;
     }
 
     return 0;
