@@ -57,3 +57,20 @@ void MainWindow::on_pushButton_5_clicked()
         ui->label_decyzja->setText("nie");
     }
 }
+
+//List widget
+void MainWindow::on_pushButton_6_clicked()
+{
+    /*
+    //wybranie listy zaznaczonych elementów
+    QList<QListWidgetItem*> selectedItems = ui->listWidget->selectedItems();
+    if (!selectedItems.isEmpty()) {
+        QListWidgetItem* selectedItem = selectedItems.first();
+        QString selectedText = selectedItem->text();
+        ui->label_lista->setText(selectedText);
+    }*/
+
+    //wybranie samego indexu, numeruje od 0
+    int index = ui->listWidget->currentRow();
+    ui->label_lista->setText("wybrany element to "+QString::number(index));
+}
